@@ -1,0 +1,12 @@
+apiVersion: skaffold/v1beta16
+kind: Config
+metadata:
+  name: nodejs-docker-webapp
+build:
+  artifacts:
+  - image: gcr.io/unity-ads-workshop-test/azmattil-nodejs-docker-webapp
+deploy:
+  kubectl:
+    manifests:
+    - manifests/deployment.yaml
+    - manifests/service.yaml
