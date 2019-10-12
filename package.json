@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-docker-webapp",
+  "name": "azmattil-nodejs-docker-webapp",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
