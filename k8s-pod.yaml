@@ -6,3 +6,21 @@ spec:
   containers:
     - name: nodepode
       image: eu.gcr.io/kubehube/azmattil-nodejs-docker-webapp
+---
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    app: nodepode
+  name: nodepode
+  namespace: kubehube
+
+spec:
+  type: NodePort
+  ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+        targetPort: 8080
+  selector:
+    app: nodepode
